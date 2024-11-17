@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product-form,
+        .cart {
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            margin-bottom: 10px;
+        }
+    </style>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Shopping Cart</h1>
+    <div class="product-form">
+        <h2>Create Product</h2>
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="number" id="productPrice" placeholder="Product Price">
+        <button onclick="{createProduct();document.getElementById('productName').value='';
+            document.getElementById('productPrice').value='';}">Create Product</button>
+    </div>
+    <div class="product-form">
+        <h2>Add Item to Cart</h2>
+        <select id="productSelect"></select>
+        <input type="number" id="productQuantity" placeholder="Quantity">
+        <button onclick="{addItemToCart();document.getElementById('productQuantity').value='';}">Add to Cart</button>
+    </div>
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cartItems"></div>
+        <p>Total Price: <span id="totalPrice">0</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
